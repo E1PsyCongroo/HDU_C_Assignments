@@ -23,6 +23,6 @@
 
 > For windows
 >
-> 只需将gcc的输出文件后缀改为.exe
+> gcc -o squares.exe -Wall -Werror -std=gnu99 -pedantic squares.c main.o
 >
-> 在命令行中使用squares.exe 4 1 2 3即可
+> 在命令行中使用.\squares.exe 4 1 2 3即可
