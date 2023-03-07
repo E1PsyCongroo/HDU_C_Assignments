@@ -52,5 +52,5 @@ int main(void) {
         scanf("%d", &number);
     }
     triggerStackOverflow(number);
-    return 0;
+    return EXIT_SUCCESS;
 }
