@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+int count = 0;
 int kGotoTable[1024] = {
     456,  841,  205,  326,  999,  935,   16,  497,  825,  218,  719,  204,  722,  792,  889,  779,  195, 1008,  776,  834,  587,  652,  498,  973,  428,  676,  876,  148,  126,  374,  190,   76,
     530,  994,  898,  806,   75,  865,   30,  863,   36,  167,    7,  414,  496,  391,  103,  111,  679,   35,  953,   65, 1013,   45,  263,  736,  760,  648,  983,   78,  626,   83,  571,  595,
@@ -36,7 +37,10 @@ int kGotoTable[1024] = {
 };
 
 void triggerStackOverflow(int value) {
-    triggerStackOverflow(kGotoTable[value]);
+    if (count++ < 1024){
+        triggerStackOverflow(kGotoTable[value]);
+        printf("%d\t", value);
+    }
 }
 
 int main(void) {
