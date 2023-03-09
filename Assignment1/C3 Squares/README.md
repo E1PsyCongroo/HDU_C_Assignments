@@ -23,6 +23,8 @@
 
 > For windows
 >
+> 请使用文件main.o而不是squares_test.o
+>
 > gcc -o squares.exe -Wall -Werror -std=gnu99 -pedantic squares.c main.o
 >
 > 在命令行中使用.\squares.exe 4 1 2 3即可
