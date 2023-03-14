@@ -7,6 +7,8 @@
 
 - 链表参考资料：https://gw9u39xwqi.feishu.cn/wiki/wikcnzqzvW0QsL9FJRb5YdQANoe
 
+- 到此为止，你的C语言学习算是达标辣！
+
   
 
   
