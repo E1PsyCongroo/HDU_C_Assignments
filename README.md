@@ -1,6 +1,6 @@
 # 计算机科学讲义C语言任务模块
 
-- 你可以通过使用git`git clone https://github.com/E1PsyCongroo/SRT_C_Assignments.git`获取任务
+- 你可以通过使用git`git clone https://github.com/E1PsyCongroo/HDU_C_Assignments.git`获取任务
 - 或者通过下载zip获取任务
 - C1为前置知识检测题，如果发现卡在C1，请继续学习前置知识。
 - 对于前置知识的练习，你可以通过以下方式：
