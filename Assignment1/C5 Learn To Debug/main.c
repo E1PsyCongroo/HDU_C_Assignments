@@ -39,7 +39,6 @@ int kGotoTable[1024] = {
 void triggerStackOverflow(int value) {
     if (count++ < 1024){
         triggerStackOverflow(kGotoTable[value]);
-        printf("%d\t", value);
     }
 }
 
