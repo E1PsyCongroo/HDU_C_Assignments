@@ -35,6 +35,21 @@ int kGotoTable[1024] = {
     311,  372,  392,  513,  289,  366,  495,  474,  597,  246,  417,  575,  894,  512,  717,  731,  751,  313,  252,  175,  966,  412,  636,  818,  239,  766,  341,   63,  901,  919,  156,    8,
 };
 
+void shuffleValues(int arr[], int count)
+{
+	srand(0);
+    const unsigned int  magic = 100;
+    for (unsigned int j = 0; j < magic; j++) {
+	    for (int i = 0; i < count - 1; i++)
+	    {
+		    int num = i + rand() % (count - 1 - i);
+		    int temp = arr[i];
+		    arr[i] = arr[num];
+		    arr[num] = temp;
+	    }
+    }
+}
+
 void triggerStackOverflow(int value) {
     triggerStackOverflow(kGotoTable[value]);
 }
@@ -42,11 +57,13 @@ void triggerStackOverflow(int value) {
 int main(void) {
     int number;
     printf("What is your favorite number from 0 to 1023?\n");
+    // 如果嫌太烦了建议使用数字42
     scanf("%d", &number);
     while (number < 0 || number > 1023) {
-        printf("Opps!You played a joke on me.Please give me a number from 0 to 1023.");
+        printf("Oops!You played a joke on me.Please give me a number from 0 to 1023.");
         scanf("%d", &number);
     }
+    shuffleValues(kGotoTable, 1024);
     triggerStackOverflow(number);
     return EXIT_SUCCESS;
 }
